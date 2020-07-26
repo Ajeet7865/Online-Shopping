@@ -1,0 +1,179 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="User_Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="../css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../css/all.css" rel="stylesheet" />
+        <link href="../css/custom.css" rel="stylesheet" />
+        <style>
+            .header-search form .search-btn {
+        height: 40px;
+        width: 100px;
+        background: #D10024;
+        color: #FFF;
+        font-weight: 700;
+        border: none;
+        border-radius: 0px 40px 40px 0px;
+    }
+        </style>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server" id="form1">
+        <header>
+            <div id="top-header">
+                <div class="container">
+                    <ul class="header-links pt-1">
+                        <li><a href="Index.aspx"><i class="fa fa-home"></i>Home</a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i>+91 72106 27361</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i>ajeetmathur7865@gmail.com</a></li>
+                        <li><a href="#"><i class="fa fa-map-marker"></i>New Delhi, India</a></li>
+                        <li><a href="Login.aspx"><i class="fa fa-user ml-5"></i>Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="header">
+                <div class="container">
+                    <div class="row mt-2">
+                        <div class="col-md-4 col-sm-3">
+                            <div class="header-logo">
+                                <a href="Index.aspx">Online Gadgets Place</a>
+                                <div class="text-white" style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shopping Mall For Gadgets</div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 text-center">
+                            <div class="header-search">
+                                <asp:DropDownList ID="ddlCategory" runat="server" CssClass="input-select" DataTextField="cat_name" Style="margin-right: -6px; height: 38px; border-radius: 40px 0px 0px 40px;"></asp:DropDownList>
+                                <asp:TextBox ID="txtSearch" runat="server" placeholder="Search products here.." CssClass="input" Style="width: 300px; height: 38px; margin-right: -4px;" />
+                                <asp:Button ID="btnSearch" Text="Search" runat="server" CssClass="search-btn" Style="height: 40px; width: 100px; background: #D10024; color: #FFF; font-weight: 700; border: none; border-radius: 0px 40px 40px 0px;" />
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-sm-1 text-white cart">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-shopping-cart fa-1x text-center"></i>
+                                <br />
+                                <span>Your Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <%-- Header Section End --%>
+        <%-- Main Menu --%>
+        <div class="container mt-4">
+            <ul class="header-nav">
+                <li><a href="Index.aspx">Home</a></li>
+                <li><a href="#">Hot Deals</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="Cart.aspx">Cart</a></li>
+                <li><a href="Product.aspx">Product</a></li>
+                <li><a href="#">Cameras</a></li>
+                <li><a href="Contact-Us.aspx">Contact Us</a></li>
+            </ul>
+            <hr />
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <%-- Content Place Holder --%>
+        </asp:ContentPlaceHolder>
+        <div id="hot-deal" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="hot-deal">
+                            <ul class="hot-deal-countdown">
+                                <li>
+                                    <div>
+                                        <h3>02</h3>
+                                        <span>Days</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <h3>10</h3>
+                                        <span>Hours</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <h3>34</h3>
+                                        <span>Mins</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <h3>60</h3>
+                                        <span>Secs</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h2 class="text-uppercase">hot deal this week</h2>
+                            <p>New Collection Up to 50% OFF</p>
+                            <a class="btn btn-danger " href="#">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /HOT DEAL SECTION -->
+        <%-- cart --%>
+        <div class="container">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li class="active" data-target="#demo" data-slide-to="0"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="/online%20gadgets%20place/images/product01.png" class="d-block w-100" /></div>
+                            <div class="col-sm-3">
+                                <img src="/online%20gadgets%20place/images/product02.png" class="d-block w-100" /></div>
+                            <div class="col-sm-3">
+                                <img src="/online%20gadgets%20place/images/product03.png" class="d-block w-100" /></div>
+                            <div class="col-sm-3">
+                                <img src="/online%20gadgets%20place/images/product04.png" class="d-block w-100" /></div>
+                        </div>
+                    </div>
+                    <!-- slider 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="/online%20gadgets%20place/images/product05.png" class="d-block w-100" /></div>
+                            <div class="col-sm-3">
+                                <img src="/online%20gadgets%20place/images/product06.png" class="d-block w-100" /></div>
+                            <div class="col-sm-3">
+                                <img src="/online%20gadgets%20place/images/product07.png" class="d-block w-100" /></div>
+                            <div class="col-sm-3">
+                                <img src="/online%20gadgets%20place/images/product08.png" class="d-block w-100" /></div>
+                        </div>
+                    </div>
+                    <a href="#demo" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#demo" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /Cart -->
+
+
+
+        <%-- footer section  --%>
+        <div class="container-fluid text-center" style="background-color: #15161D; color: #fff; padding: 12px; border-top: 5px solid crimson;">
+            <p class="pt-3">Copyright &copy; 2020 Programmer-Ajeet 178838084</p>
+        </div>
+    </form>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

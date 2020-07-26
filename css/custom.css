@@ -1,0 +1,180 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+#header {
+    background-color: #15161D;
+    padding: 15px;
+    border-bottom: 5px solid crimson;
+}
+
+   #header .header-logo a {
+        font-size: 27px;
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        /*margin-top: -25px;*/
+    }
+
+.header-search form {
+    position: relative;
+}
+
+    /*----------------------------*\
+	Top header
+\*----------------------------*/
+#top-header {
+    padding: 4px;
+    background-color: #1E1F29;
+}
+
+.header-links li {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.header-links li a {
+    color: #FFF;
+}
+
+    .header-links li a:hover {
+        color: crimson;
+    }
+
+.header-links li i {
+    color: #D10024;
+    margin-right: 5px;
+}
+.product-widget .product-body .product-price {
+  font-size: 14px;
+  color: #D10024;
+}
+.product-widget .product-body .product-name {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/*Main Menu*/
+.header-nav li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.header-nav li a {
+    color: grey;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.header-nav li a:hover {
+    color: #D10024;
+    border-bottom: 1px solid red;
+}
+
+/* Hot Deal */
+#hot-deal.section {
+  padding: 60px 0px;
+  margin: 30px 0px;
+  background-color: #E4E7ED;
+  background-image: url('/online gadgets place/images/hotdeal.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hot-deal {
+  text-align: center;
+}
+
+.hot-deal .hot-deal-countdown {
+  margin-bottom: 30px;
+}
+
+.hot-deal .hot-deal-countdown>li {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: #D10024e6;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0px 5px;
+}
+
+.hot-deal .hot-deal-countdown>li>div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hot-deal .hot-deal-countdown>li>div h3 {
+  color: #FFF;
+  margin-bottom: 0px;
+}
+
+.hot-deal .hot-deal-countdown>li>div span {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.hot-deal p {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.hot-deal .cta-btn {
+  margin-top: 15px;
+}
+
+/*   Admin CSS    */
+.Menus h4:hover {
+    background-color: #D10024;
+    cursor: pointer;
+}
+
+.Menus a {
+    text-decoration: none;
+    color: white;
+}
+
+/*------------------------------------------
+    Media Query For Responsive Website
+-----------------------------------------*/
+@media only screen and (max-width: 800px) {
+    .input {
+        width: 150px;
+    }
+
+    #ddlCategory {
+        display: none;
+    }
+
+    .header-logo {
+        text-align: center;
+    }
+
+    .cart {
+        margin-top: 12px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #ddlCategory {
+        display: none;
+    }
+
+    #txtSearch {
+        width: 120px;
+    }
+}
